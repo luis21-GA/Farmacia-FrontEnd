@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia TPI-2019</title>
+
+    <script type="module" src="./Web-Components/tablaBusqueda.js"></script>
+    <script type="module" src="./Web-Components/menu.js"></script>
+    <script type="module" src="./Control/restController.js"></script>
+
+
+    <link href="Style/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Farmacia La bendicion de Jonathan Hernandez</h1>
+    </div>
+
+
+    <main>
+        <div class="row">
+            <div class="col-2 col-s-2">
+                <menu-wc></menu-wc>
+            </div>
+
+            <div class="col-8 col-s-10">
+
+                <h1>
+                    <center>PRODUCTOS</center>
+                </h1>
+                <tabla-dinamica busqueda="producto/tabla" paginacion="5"></tabla-dinamica>
+
+                
+
+            </div>
+
+            <div class="col-2 col-s-12">
+                <div class="aside">
+                    <h2>Productos?</h2>
+                    <p>Te ofrece cosmetica natural, productos para el bebe, alimentacion y dieta.</p>
+                    <h2>Calidad?</h2>
+                    <p>Ofreciendo los mejores productos a nivel nacional</p>
+                    <h2>Ofertas?</h2>
+                    <p>Navega y encontraras las mejores ofertas y promociones...</p>
+                </div>
+            </div>
+        </div>
+
+    </main> 
+
+
+    <div class="footer">
+        <p>Todo los derechos reservado 2019</p>
+    </div>
+
+</body>
+
+</html>
