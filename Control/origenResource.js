@@ -1,7 +1,13 @@
 /**
- * Clase que forma la url que se va a consumir
+ * Clase que forma la url que se va a consumir 
  */
 class OrigenResource{
+    /**
+     * constructor para formar la URL a usar
+     * @param {*} entidad path para complementar el url con lo que se va consumir
+     * @param {*} metodo path para complementar // no es necesario solo metodos especificos
+     * @param {*} url path completo a consumir
+     */
     constructor(entidad, metodo, url){
         this.entidad = entidad;
         this.metodo = metodo;

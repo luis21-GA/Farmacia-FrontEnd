@@ -10,20 +10,32 @@ class RestController extends OrigenResource {
 
     }
 
+    /**
+     * metodo generico que trae todos los datos
+     * @param {*} entidad parametro para filtrar de que parte traer los datos
+     */
     findAll(entidad) {
         return GetDatos.getDatos(`${this.url_base}/${entidad}/`).then(data => {
             return data
         });
     }
 
+    /**
+     * metodo para traer un registro especifico
+     * @param {*} entidad parametro para filtrar de que parte traer los datos
+     * @param {*} id filtro para buscar registro especifico
+     */
     findById(entidad, id) {
         return GetDatos.getDatos(`${this.url_base}/${entidad}/${id}`).then(id_data => {
             return id_data
         });
     }
+
     /**
-     * a => limite inferior
-     * b => limite superior 
+     * metodo para traer una cantidad de datos 
+     * @param {*} entidad parametro para filtrar de que parte traer los datos
+     * @param {*} a valor entero donde iniciara la busqueda
+     * @param {*} b total de registro a traer
      */
     findByRange(entidad, a, b) {
         return GetDatos.getDatos(`${this.url_base}/${entidad}/?first=${a}&pagesize=${b}`).then(rango => {
@@ -31,34 +43,15 @@ class RestController extends OrigenResource {
         });
     }
 
-    findByName(entidad, nombre) {
-        return GetDatos.getDatos(`${this.url_base}/${entidad}/findByName/${nombre}`).then(busquedaNombre => {
-            return busquedaNombre
-        });
-    }
-
+    /**
+     * metodo para contar cantidad de registros que posee la api a consumir
+     * @param {*} entidad parametro para filtrar de que parte traer los datos
+     */
     count(entidad) {
         return GetDatos.getDatos(`${this.url_base}/${entidad}/count`).then(cantidad => {
             return cantidad
         });
     }
-    //recibe un object {}, no un Json
-    create(datos, entidad) {
-        return GetDatos.setDatos(datos, `${this.url_base}/${entidad}/crear`).then(estadoCreado => {
-            return estadoCreado
-        });
-    }
 
-    edit(datos, entidad, id) {
-        return GetDatos.setDatos(datos, `${this.url_base}/${entidad}/${id}`).then(estadoEditado => {
-            return estadoEditado
-        });
-    }
-
-    remove(entidad, id) {
-        return GetDatos.setDatos(this.datos_prueba, `${this.url_base}/${entidad}/${id}`).then(estadoBorrado => {
-            return estadoBorrado
-        });
-    }
 }
 export default new RestController;
