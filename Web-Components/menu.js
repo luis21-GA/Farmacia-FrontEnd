@@ -23,6 +23,7 @@ class Menu extends HTMLElement {
             background-color: #33b5e5;
             color: #ffffff;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            text-align: center;
         }
         
         li:hover {
@@ -42,7 +43,7 @@ class Menu extends HTMLElement {
 
         let liProducto = document.createElement('li');
         let aProducto = document.createElement('a');
-        aProducto.setAttribute('href', 'https://www.google.com/');
+        aProducto.setAttribute('href', './index.html');
         aProducto.innerText = 'PRODUCTOS';
         liProducto.appendChild(aProducto);
         ulMenu.appendChild(liProducto);
@@ -50,7 +51,7 @@ class Menu extends HTMLElement {
 
         let liPagos = document.createElement('li');
         let aPagos = document.createElement('a');
-        aPagos.setAttribute('href', 'https://www.google.com/');
+        aPagos.setAttribute('href', './formaPagos.html');
         aPagos.innerText = 'FORMA DE PAGOS';
         liPagos.appendChild(aPagos);
         ulMenu.appendChild(liPagos);
@@ -58,21 +59,28 @@ class Menu extends HTMLElement {
 
         let liDescuento = document.createElement('li');
         let aDescuento = document.createElement('a');
-        aDescuento.setAttribute('href', 'https://www.google.com/');
-        aDescuento.innerText = 'FORMA DE DESCUENNTO';
+        aDescuento.setAttribute('href', './descuento.html');
+        aDescuento.innerText = 'FORMA DE DESCUENTO';
         liDescuento.appendChild(aDescuento);
         ulMenu.appendChild(liDescuento);
 
 
+        let liSucursal = document.createElement('li');
+        let aSucursal = document.createElement('a');
+        aSucursal.setAttribute('href', './sucursales.html');
+        aSucursal.innerText = 'SUCURSALES';
+        liSucursal.appendChild(aSucursal);
+        ulMenu.appendChild(liSucursal);
+
+
         let liUsuario = document.createElement('li');
         let aUsuario = document.createElement('a');
-        aUsuario.setAttribute('href', 'https://www.google.com/');
-        aUsuario.innerText = 'INFORMACION DE USUARIOS';
+        aUsuario.setAttribute('href', './proveedores.html');
+        aUsuario.innerText = 'NUESTRO PROVEEDORES';
         liUsuario.appendChild(aUsuario);
         ulMenu.appendChild(liUsuario);
 
         sd.appendChild(ulMenu);
-
 
     }
 }
