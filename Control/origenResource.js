@@ -11,7 +11,7 @@ class OrigenResource{
     constructor(entidad, metodo, url){
         this.entidad = entidad;
         this.metodo = metodo;
-        this.url = `http://localhost:8080/Farmacia/webresources/${this.getEntidad}/${this.getMetodo}`;
+        this.url = `http://localhost:8080/WebAppFarmacia/webresources/${this.getEntidad}/${this.getMetodo}`;
     }
 
     get getUrl(){

@@ -6,7 +6,7 @@ import GetDatos from "./getData.js";
 class RestController extends OrigenResource {
     constructor() {
         super();
-        this.url_base = `http://localhost:8080/Farmacia/webresources`;
+        this.url_base = `http://localhost:8080/WebAppFarmacia/webresources`;
 
     }
 
