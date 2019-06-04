@@ -7,6 +7,7 @@ class GetDatos {
      * @param {*} url direecion de la api
      */
     async getDatos(url) {
+        console.log('URL: ' + url)
         let data = await (await (fetch(url)
             .then(respuesta => {
                 return respuesta.json()
@@ -16,6 +17,7 @@ class GetDatos {
             })
         ))
         return data;
+        
     }
 }
 export default new GetDatos;
